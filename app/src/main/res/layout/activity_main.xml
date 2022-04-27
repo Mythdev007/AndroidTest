@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etvInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:hint="@string/enter_your_text_here"
+        android:gravity="center"
+        android:maxLines="3"/>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/etvInput"
+        tools:layout_editor_absoluteX="16dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@android:color/darker_gray"
+        android:textColor="@color/white"
+        android:text="@string/output"
+        android:maxLines="3"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText"
+        tools:layout_editor_absoluteX="0dp"
+        android:text="@string/save"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
